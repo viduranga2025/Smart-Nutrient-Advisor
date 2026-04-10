@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriFertilizer - Calculator Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="calculator-card">
+        <header>
+            <i class="fa-solid fa-calculator"></i>
+            <h1>Fertilizer Calculator</h1>
+            <p>Calculate precise NPK requirements</p>
+        </header>
+
+        <div class="form-container">
+            <div class="input-group">
+                <label>Select Crop Type</label>
+                <select id="cropType">
+                    <option value="paddy">Paddy (වී)</option>
+                    <option value="maize">Maize (බඩ ඉරිඟු)</option>
+                    <option value="vegetables">Vegetables (එළවළු)</option>
+                    <option value="tea">Tea (තේ)</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Land Size (Acres)</label>
+                <input type="number" id="landSize" placeholder="e.g. 2" step="0.5">
+            </div>
+
+            <button onclick="calculateFertilizer()">Calculate Now</button>
+        </div>
+
+        <div id="resultBox" class="result-box hidden">
+            <h3>Estimated Requirements:</h3>
+            <div class="npk-display">
+                <div class="npk-item"><strong>N</strong><span id="nitro">0</span>kg</div>
+                <div class="npk-item"><strong>P</strong><span id="phos">0</span>kg</div>
+                <div class="npk-item"><strong>K</strong><span id="potas">0</span>kg</div>
+            </div>
+            <p id="totalWeight"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
